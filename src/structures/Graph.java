@@ -1,7 +1,5 @@
 package structures;
 
-import knowledge.Atom;
-
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
