@@ -17,16 +17,16 @@ public class Graph<T> {
         adjacentVertices.putIfAbsent(t, new ArrayList<>());
     }
 
-    public void removeAtom(T t){
+    public void removeVertex(T t){
         adjacentVertices.remove(t); //Feel this is redundant, but I'll leave it for now
     }
 
-    public void addConnection(T t1, T t2){
+    public void addEdge(T t1, T t2){
         adjacentVertices.get(t1).add(t2);
         adjacentVertices.get(t2).add(t1);
     }
 
-    public void removeConnection(T t1, T t2){
+    public void removeEdge(T t1, T t2){
         if (adjacentVertices.get(t1) != null)
             adjacentVertices.get(t1).remove(t2);
         if (adjacentVertices.get(t2) != null)
